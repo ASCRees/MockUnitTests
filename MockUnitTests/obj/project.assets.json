@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\MockUnitTest\\MockUnitTests\\MockUnitTests.csproj",
+      "projectUniqueName": "C:\\Projects\\MockUnitTests\\MockUnitTests\\MockUnitTests.csproj",
       "projectName": "MockUnitTests",
-      "projectPath": "C:\\Projects\\MockUnitTest\\MockUnitTests\\MockUnitTests.csproj",
+      "projectPath": "C:\\Projects\\MockUnitTests\\MockUnitTests\\MockUnitTests.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\MockUnitTest\\MockUnitTests\\obj\\",
+      "outputPath": "C:\\Projects\\MockUnitTests\\MockUnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -239,7 +239,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
