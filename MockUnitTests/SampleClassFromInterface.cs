@@ -8,5 +8,12 @@ namespace MockUnitTests
         {
             throw new NotImplementedException();
         }
+
+        public int DoDivide(int val1, int val2)
+        {
+            throw new NotImplementedException();
+        }
+
+       
     }
 }
