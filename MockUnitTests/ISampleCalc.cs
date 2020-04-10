@@ -2,8 +2,9 @@
 {
     public interface ISampleCalc
     {
-        int CallingCalc(int val1, int val2);
+        int CallingCalcMultiply(int val1, int val2);
         int CalcToPower(int Value, int toPowerOf);
+        int CallingCalcDivide(int val1, int val2);
 
     }
 }

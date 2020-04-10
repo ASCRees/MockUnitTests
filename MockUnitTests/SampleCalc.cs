@@ -11,9 +11,15 @@ namespace MockUnitTests
             _sampleClass = sampleClass;
         }
 
-        public int CallingCalc(int val1, int val2)
+        public int CallingCalcMultiply(int val1, int val2)
         {          
-            var returnval = _sampleClass.DoMultiply(val1, val2) + 100;
+            var returnval = _sampleClass.DoMultiply(val1, val2);
+            return returnval;
+        }
+
+        public int CallingCalcDivide(int val1, int val2)
+        {
+            var returnval = _sampleClass.DoDivide(val1, val2);
             return returnval;
         }
 
