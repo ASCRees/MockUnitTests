@@ -1,29 +1,11 @@
-# README #
+# Mock Unit Tests #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Mock Unit Tests using the MOQ and NUnit frameworks  
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* This project gives examples of performing Mock Unit Tests using the MOQ framework to performunit tests against for an interface as well as an abstract base class. 
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* After opening in VS run "Update-package -reinstall" in Package Manager console. 
