@@ -17,10 +17,10 @@ namespace MockUnitTests.Tests
             ISampleCalc sampleCalc = new SampleCalc(sampleClass.Object);
 
             //Act
-            var multval = sampleCalc.CallingCalc(3, 2);
+            var multval = sampleCalc.CallingCalcMultiply(3, 2);
 
             //Assert
-            Assert.IsTrue(multval.Equals(106));
+            Assert.IsTrue(multval.Equals(6));
         }
 
         [Test]
@@ -34,7 +34,7 @@ namespace MockUnitTests.Tests
             ISampleCalc sampleCalc = new SampleCalc(sampleClass.Object);
 
             //Act
-            var multval = sampleCalc.CallingCalc(3, 2);
+            var multval = sampleCalc.CallingCalcMultiply(3, 2);
 
             //Assert
             sampleClass.Verify(x => x.DoMultiply(It.IsAny<Int32>(), It.IsAny<Int32>()), Times.Once);
@@ -96,5 +96,21 @@ namespace MockUnitTests.Tests
             //Assert
             Assert.Throws<ArgumentException>(()=> sampleCalc.CalcToPower(2, toPower));
         }
+
+        [Test]
+        public void Mock_DoCalc_Mock_Exception_DivideByZero()
+        {
+            //Arrange
+            var sampleClass = new Mock<ISampleClass>();
+            sampleClass.Setup(x => x.DoDivide(It.IsAny<Int32>(), It.IsAny<Int32>()))
+                .Throws<DivideByZeroException>();
+
+            ISampleCalc sampleCalc = new SampleCalc(sampleClass.Object);
+
+            //Act
+            //Assert
+            Assert.Throws<DivideByZeroException>(() => sampleCalc.CallingCalcDivide(10, 2));
+        }
+
     }
 }
