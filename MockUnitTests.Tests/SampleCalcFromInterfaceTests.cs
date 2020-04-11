@@ -1,9 +1,8 @@
-﻿using Moq;
-using NUnit.Framework;
-using System;
-
-namespace MockUnitTests.Tests
+﻿namespace MockUnitTests.Tests
 {
+    using Moq;
+    using NUnit.Framework;
+    using System;
     public class SampleCalcFromInterfaceTests
     {
         [Test]

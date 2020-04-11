@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace MockUnitTests
+﻿namespace MockUnitTests
 {
+    using System;
     public class SampleClassFromInterface : ISampleClass
     {
         public int DoMultiply(int val1, int val2)

@@ -70,3 +70,5 @@ MockUnitTests/obj/project.assets.json
 MockUnitTests.Tests/obj/Debug/MockUnitTests.Tests.csproj.CoreCompileInputs.cache
 MockUnitTests/obj/project.nuget.cache
 MockUnitTests/obj/Debug/netstandard2.0/MockUnitTests.csproj.CoreCompileInputs.cache
+MockUnitTests/StyleCop.Cache
+MockUnitTests.Tests/StyleCop.Cache
