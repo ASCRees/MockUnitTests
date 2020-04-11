@@ -1,9 +1,9 @@
-﻿using Moq;
-using NUnit.Framework;
-using System;
-
-namespace MockUnitTests.Tests
+﻿namespace MockUnitTests.Tests
 {
+    using Moq;
+    using NUnit.Framework;
+    using System;
+
     [TestFixture]
     public class SampleCalcFromBaseClassTests
     {
@@ -45,6 +45,7 @@ namespace MockUnitTests.Tests
             sampleClass.CallBase = true;
             sampleClass.Setup(x => x.DoMultiply(It.IsAny<Int32>(), It.IsAny<Int32>())).Returns((Int32 a, Int32 b) => a * b);
             //Act
+            sampleClass.Object.AdderValue = 100;
             var multval = sampleClass.Object.CallingMultiplyCalc(3, 2);
 
             //Assert
@@ -52,17 +53,36 @@ namespace MockUnitTests.Tests
         }
 
         [Test]
-        public void Mock_Verify_CallMultipleCalc_Returns_112()
+        public void Mock_Verify_CallMultipleCalc_Returns_22()
         {
             //Arrange
             var sampleClass = new Mock<SampleClassFromBase>();
             sampleClass.CallBase = true;
             sampleClass.Setup(x => x.DoMultiply(It.IsAny<Int32>(), It.IsAny<Int32>())).Returns((Int32 a, Int32 b) => a * b);
+           
+            sampleClass.SetupProperty(x => x.AdderValue,10);
             //Act
             var multval = sampleClass.Object.CallingMultiplyCalc(3, 2);
 
             //Assert
-            Assert.IsTrue(multval.Equals(112));
+            Assert.IsTrue(multval.Equals(22));
+        }
+
+        [Test]
+        public void Mock_Verify_CallMultipleCalc_Verify_Property_Set()
+        {
+            //Arrange
+            var sampleClass = new Mock<SampleClassFromBase>();
+            sampleClass.CallBase = true;
+            sampleClass.Setup(x => x.DoMultiply(It.IsAny<Int32>(), It.IsAny<Int32>())).Returns((Int32 a, Int32 b) => a * b);
+
+            sampleClass.SetupProperty(x => x.AdderValue, 20);
+            //Act
+            sampleClass.Object.AdderValue = 20;
+            var multval = sampleClass.Object.CallingMultiplyCalc(5, 4);
+
+            //Assert
+            sampleClass.VerifySet(x => x.AdderValue = 20);
         }
     }
 }

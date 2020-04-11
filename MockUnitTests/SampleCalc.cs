@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace MockUnitTests
+﻿namespace MockUnitTests
 {
+    using System;
     public class SampleCalc : ISampleCalc
     {
         private ISampleClass _sampleClass;

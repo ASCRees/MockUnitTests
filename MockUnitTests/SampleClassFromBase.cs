@@ -1,12 +1,13 @@
-﻿using System;
-
-namespace MockUnitTests
+﻿namespace MockUnitTests
 {
+    using System;
     public class SampleClassFromBase : BaseSampleClass
     {
+        public override int AdderValue { get; set; }
+
         public Int32 CallingMultiplyCalc(int val1, int val2)
         {
-            var returnval = DoMultiply(val1, val2) + DoMultiply(val1, val2) + 100;
+            var returnval = DoMultiply(val1, val2) + DoMultiply(val1, val2) + AdderValue;
             return returnval;
         }
 
